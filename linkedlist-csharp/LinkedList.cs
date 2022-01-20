@@ -30,7 +30,7 @@ namespace LinkedList
             if (currentNode == null)
             {
                 this._head = toBeInserted;
-                this._length++;
+                ++this._length;
 
                 return this._head;
             }
@@ -39,7 +39,7 @@ namespace LinkedList
                 currentNode = currentNode.Next;
 
             currentNode.Next = toBeInserted;
-            this._length++;
+            ++this._length;
 
             return toBeInserted;
         }
@@ -88,7 +88,7 @@ namespace LinkedList
                 Node<T> elem = new Node<T>(value);
                 elem.Next = this._head;
                 this._head = elem;
-                this._length++;
+                ++this._length;
                 return elem;
             }
 
@@ -98,7 +98,7 @@ namespace LinkedList
             while (current != null && count != index - 1)
             {
                 current = current.Next;
-                count++;
+                ++count;
             }
 
             if (current == null)
@@ -108,7 +108,7 @@ namespace LinkedList
             element.Next = current.Next;
             current.Next = element;
 
-            this._length++;
+            ++this._length;
 
             return element;
         }
@@ -125,7 +125,7 @@ namespace LinkedList
             {
                 Console.WriteLine($"{count} - {current.Data}");
                 current = current.Next;
-                count++;
+                ++count;
             }
 
             Console.WriteLine($"\nA lista possui {this.Count()} itens.");
@@ -146,7 +146,7 @@ namespace LinkedList
             {
                 previous = current;
                 current = current.Next;
-                count++;
+                ++count;
             }
 
             if (current == null)
@@ -179,7 +179,7 @@ namespace LinkedList
                 previous = current;
                 current = current.Next;
                 value = current.Data;
-                count++;
+                ++count;
             }
 
             if (current == null)
@@ -207,7 +207,7 @@ namespace LinkedList
             while (!EqualityComparer<T>.Default.Equals(current.Data, item) && current != null)
             {
                 current = current.Next;
-                index++;
+                ++index;
             }
 
             if (current == null)
@@ -228,7 +228,7 @@ namespace LinkedList
             while (currentIndex != index && current != null)
             {
                 current = current.Next;
-                currentIndex++;
+                ++currentIndex;
             }
 
             if (current == null)
