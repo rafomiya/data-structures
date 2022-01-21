@@ -246,7 +246,7 @@ namespace LinkedList
             if (this.IsEmpty())
                 return;
 
-            Node<T> previous = null;
+            Node<T> previous = default;
             Node<T> current = this._head;
             Node<T> nextNode = this._head.Next;
 
@@ -272,7 +272,7 @@ namespace LinkedList
             Node<T> current = this._head;
             while (current != null)
             {
-                reversed.Push(current.Data);
+                reversed.Insert(current.Data, 0);
                 current = current.Next;
             }
 
