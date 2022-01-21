@@ -127,22 +127,20 @@ namespace LinkedList
                 current = current.Next;
                 ++count;
             }
-
-            Console.WriteLine($"\nA lista possui {this.Count()} itens.");
         }
 
         /// <summary>
         /// Deletes the first item with the value
         /// of the parameter. Returns its index.
         /// </summary>
-        public int Delete(T item)
+        public int Delete(T data)
         {
             Node<T> previous = default;
             Node<T> current = this._head;
 
             int count = 0;
 
-            while (current != null && !EqualityComparer<T>.Default.Equals(current.Data, item))
+            while (current != null && !EqualityComparer<T>.Default.Equals(current.Data, data))
             {
                 previous = current;
                 current = current.Next;
@@ -150,7 +148,7 @@ namespace LinkedList
             }
 
             if (current == null)
-                throw new ArgumentException("The item isn't on the list.");
+                throw new ArgumentException("The data isn't on the list.");
 
             if (count == 0)
                 this._head = current.Next;
@@ -200,18 +198,18 @@ namespace LinkedList
         /// Returns the index of the first item
         /// with the value equals to the given parameter.
         /// </summary>
-        public int Search(T item)
+        public int Search(T data)
         {
             Node<T> current = this._head;
             int index = 0;
-            while (!EqualityComparer<T>.Default.Equals(current.Data, item) && current != null)
+            while (!EqualityComparer<T>.Default.Equals(current.Data, data) && current != null)
             {
                 current = current.Next;
                 ++index;
             }
 
             if (current == null)
-                throw new ArgumentException("The item isn't on the list.");
+                throw new ArgumentException("The data isn't on the list.");
 
             return index;
         }

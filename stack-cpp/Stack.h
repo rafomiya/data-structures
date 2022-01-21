@@ -13,12 +13,12 @@ private:
 public:
     Stack() {}
 
-    bool push(T elem)
+    bool push(T data)
     {
         if (_count == STACK_CAPACITY)
             return false;
 
-        _values[_count] = elem;
+        _values[_count] = data;
         ++_count;
 
         return true;

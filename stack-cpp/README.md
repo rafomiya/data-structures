@@ -1,6 +1,6 @@
 # What is a Stack?
 
-`Stack` is the data structure that follows the LIFO (**L**ast **I**n **F**irst **O**ut) principle: that represents two key ideas, that are the principal two operations we can do within a `Stack`.
+`Stack` is the data structure that follows the LIFO (**L**ast **I**n **F**irst **O**ut) principle. That means it represents the two principal operations we can do within a `Stack`.
 
 ## What are the `Stack` operations?
 
@@ -15,8 +15,8 @@ These two behaviors are schematized here:
 ## What are the methods available?
 The available methods are:
 
-### `push(elem)`
-Pushes the `elem` parameter to the top of the `Stack`.
+### `push(data)`
+Pushes the `data` parameter to the top of the `Stack`.
 
 ```cpp
 // Before the push:
@@ -39,10 +39,10 @@ stack.push(d);
 ```
 
 ### `isEmpty()`
-Returns whether the stack is empty or not.
+Returns whether the `Stack` is empty or not.
 
 ```cpp
-// initializing the empty stack
+// initializing an empty stack
 Stack<string> *stack = new Stack<string>();
 
 std::cout << stack->isEmpty() << std::endl; // 1 (true)
@@ -93,7 +93,7 @@ std::cout << stack->top() << std::endl; // e
 // After the top:
 // 
 // |   |
-// | e |
+// | e | <- e still here
 // | d |
 // | c |
 // | b |
@@ -121,7 +121,7 @@ for (int i = 0; int i < 5; i++)
 ```
 
 ### `clear()`
-Removes all the items of the `Stack`, leaving it empty.
+Removes all the elements of the `Stack`, leaving it empty.
 
 ```cpp
 Stack<int> *stack = new Stack<int>();

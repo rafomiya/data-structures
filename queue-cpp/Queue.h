@@ -17,7 +17,7 @@ public:
         _outbox = new Stack<T>();
     }
 
-    void enqueue(int elem)
+    void enqueue(T elem)
     {
         ++_count;
 

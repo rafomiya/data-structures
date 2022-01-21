@@ -1,7 +1,7 @@
 # What is a Queue?
 
-A `Queue` is a data structure that follows the FIFO (**F**irst **I**n **F**irst **O**ut) principle: in other words, it works just as a normal queue of people, for instance. The first ones to arrive (enqueue) are the first ones to leave (dequeue).
-That represents two key ideas of the FIFO principle:
+A `Queue` is a data structure that follows the FIFO (**F**irst **I**n **F**irst **O**ut) principle: in other words, it works just like a normal queue of people, for instance. The first ones to arrive (enqueue) are the first ones to leave (dequeue).
+That represents two important ideas of the FIFO principle:
 
 1. elements are enqueued (added) at the end of the queue; and
 2. elements are dequeued (removed) at the front of the queue.
@@ -46,7 +46,7 @@ std::cout << queue->dequeue() << std::endl; // d
 ```
 
 ### `front()`
-Returns the element at the front of the `Queue`.
+Returns the element at the front of the `Queue`, without removing it.
 
 ```cpp
 // Before the front:
@@ -62,6 +62,8 @@ std::cout << "Front: " << queue->front() << std::endl;
 // 
 //  back        front
 //  |_d_|_c_|_b_|_a_|
+//    /\
+// d still here
 ```
 
 ### `count()`
