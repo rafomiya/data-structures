@@ -1,3 +1,9 @@
 # data-structures
 
-A repository of the data structures I have implemented.
+A repository with the data structures I have implemented.
+
+So far, these are the available data structures. All of them have with a brief explanation about the data structure itself and the available methods of each implementation.
+
+- [Stack (C++)](stack-cpp/).
+- [Queue (C++)](queue-cpp/).
+- [Linkedlist (C#)](linkedlist-csharp/).
