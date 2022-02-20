@@ -1,4 +1,4 @@
-# data-structures
+# Data Structures
 
 A repository with the data structures I have implemented.
 
